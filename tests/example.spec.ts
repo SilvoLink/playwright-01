@@ -5,7 +5,7 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-test.only('playwright page content', async ({ page }) => {
+test('playwright page content', async ({ page }) => {
   await page.goto('https://playwright.dev/');
   await expect(page.getByRole('link', { name: 'Github repository' })).toBeVisible();
   await expect(page.getByText('Playwright enables reliable end-to-end testing for modern web apps.')).toBeVisible();
