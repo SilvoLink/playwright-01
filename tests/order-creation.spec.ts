@@ -16,7 +16,7 @@ test('button enabled after filling correct data', async ({ page }) => {
     await expect(page.getByTestId('submit-order')).toBeEnabled();
 });
 
-test.only('popup is visible', async ({ page }) => {
+test('popup is visible', async ({ page }) => {
     await page.getByTestId('username').fill('random-name');
     await page.getByTestId('email').fill('mail@mail.com');
     await page.getByTestId('submit-order').click();
